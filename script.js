@@ -15,12 +15,21 @@ function redirectToChat() {
 }
 
 function showLoadingScreen(destination) {
+    // Ensure the loading screen exists
+    let loadingScreen = document.getElementById("loading");
+
+    if (!loadingScreen) {
+        console.error("Loading screen element not found.");
+        window.location.href = destination; // Fallback redirect
+        return;
+    }
+
     // Hide the main content and show the loading screen
     document.getElementById("main-content").style.display = "none";
     document.getElementById("footer").style.display = "none";
-    document.getElementById("loading").style.display = "flex";
+    loadingScreen.style.display = "flex";
 
-    // Redirect after 1 second
+    // Redirect after 1 seconds to the specified page
     setTimeout(() => {
         window.location.href = destination;
     }, 1000);
