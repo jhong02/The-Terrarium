@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Terrarium</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <aside class="sidebar">
+            <a href="landing.html" class="logo">🪲 [ The Terrarium ] </a>
+            <button class="new-message-btn" onclick="handleNewMessage()">📩 New Message (1)</button>
+            <nav class="chatrooms">
+                <p>Chatrooms</p>
+                <ul>
+                    <li>User_1</li>
+                    <li>User_2</li>
+                    <li>User_3</li>
+                    <li>User_4</li>
+                    <li>User_5</li>
+                    <li>User_6</li>
+                    <li>User_7</li>
+                    <li>User_8</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="chat-window">
+            <div class="chat-header">
+                <p>Chatroom</p>
+                <button class="about-btn" onclick="handleAbout()">about</button>
+            </div>
+            <div class="chat-messages">
+                <div class="message left">resizable text bubble</div>
+                <div class="message left">resizable text bubble</div>
+                <div class="message right">resizable text bubble</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type a message...">
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

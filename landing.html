@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to The Terrarium</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="all-bg">
+
+    <!-- LOADING SCREEN (Hidden) -->
+    <div class="loading-screen" id="loading">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="landing-container" id="main-content">
+        <h1>Welcome to...</h1>
+        <img src="images/logo.png" alt="Terrarium Image" class="landing-image">
+        <h2>The Terrarium</h2>
+    </div>
+
+    <div class="landing-footer" id="footer">
+        <p>A fun little critter quiz!</p>
+        <button class="enter-btn" onclick="showLoadingScreen('index.html')">Enter!</button>
+        <button class="about-btn landing-help"onclick="showLoadingScreen('about.html')">?</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

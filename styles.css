@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: kosugiMaru;
+}
+
+@font-face {
+    font-family: kosugiMaru;
+    src: url(fonts/KosugiMaru-Regular.ttf);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Full-Screen Chat Container */
+.chat-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #d2e4c4;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 0.25;
+    background: #698969;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.new-message-btn {
+    background: #d2e4c4;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.new-message-btn:hover {
+    background: #fff;
+}
+
+/* Click Animation */
+.anew-message-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.chatrooms p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;  /* Increase the font size */
+}
+
+.chatrooms ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.chatrooms li {
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;  /* Increase the font size for usernames */
+}
+
+/* Chat Window */
+.chat-window {
+    flex: 0.75;
+    background: #A9C3A9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #8ca38e;
+}
+
+.about-btn {
+    background: #718d72;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Button Hover */
+.about-btn:hover {
+    background: #5C8A5C;
+}
+
+/* Click Animation */
+.about-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.landing-help {
+    display: block;
+    margin: 15px auto 0; /* Moves it down below "Enter!" */
+    align-items: center;
+    text-align: center;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+}
+
+.left {
+    background: #D9D9D9;
+    align-self: flex-start;
+}
+
+.right {
+    background: #FFD2D8;
+    align-self: flex-end;
+}
+
+.chat-input {
+    background: #aab9a6;
+    padding: 10px;
+}
+
+.chat-input input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* ALL Page Styles */
+.all-bg {
+    background-color: #A0D1A0; /* Set background color */
+    height: 100vh; /* Ensure it fills the full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Green Box */
+.landing-container {
+    background: #6FA56F;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 320px;
+}
+
+/* Text & Image inside Green Box */
+.landing-container h1,
+.landing-container h2 {
+    font-family: kosugiMaru;
+    color: white;
+}
+
+.landing-image {
+    width: 150px;
+    height: auto;
+    margin: 15px 0;
+}
+
+/* Footer (Quiz Text and Button - Moved Below Green Box) */
+.landing-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.landing-footer p {
+    font-family: kosugiMaru;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Enter Button */
+.enter-btn {
+    background: #6FA56F;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Button Hover */
+.enter-btn:hover {
+    background: #5C8A5C;
+}
+
+/* Click Animation */
+.enter-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* LOADING SCREEN */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #A0D1A0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: kosugiMaru;
+    font-size: 18px;
+    color: #4B604B;
+    display: none; /* Initially hidden */
+}
+
+/* LOADING SPINNER */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #6FA56F;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+/* Loading Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
