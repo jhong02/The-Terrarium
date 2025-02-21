@@ -163,3 +163,4 @@ document.addEventListener("DOMContentLoaded", function () {
     if (usernameInput) usernameInput.focus();
     updateUsernameOnPage();
 });
+

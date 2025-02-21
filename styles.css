@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
 /* ========== Global Styles ========== */
 * {
     margin: 0;
@@ -349,6 +351,26 @@ html, body {
 .about-btn:hover {
     background: #5C8A5C;
 }
+
+.send-btn {
+    background: #6FA56F;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    border-radius: 30px;
+    flex-shrink: 0;
+    border: none;
+}
+
+.send-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.send-btn:hover {
+    background: #5C8A5C;
+}
+
 
 /* ========== Chatroom Item ========== */
 .chatroom-item {
