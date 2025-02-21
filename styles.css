@@ -27,6 +27,20 @@ html, body {
     background: #d2e4c4;
 }
 
+/* Welcome Screen */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    width: 100%;
+}
+
 /* Sidebar--------------------------------------------------------------------------------------------------------- */
 .sidebar {
     flex: 0.25;
@@ -57,15 +71,27 @@ html, body {
 .chatrooms ul {
     list-style: none;
     margin-top: 10px;
+    padding: 0;
 }
 
 .chatrooms li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the icon and username */
     padding: 10px;
     margin-top: 8px;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
-    font-size: 18px;  /* Increase the font size for usernames */
+    font-size: 18px;
+}
+
+.user-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Makes the icons circular */
+    object-fit: cover; /* Ensures the image scales properly */
+    border: 2px solid white; /* Adds a slight border for visibility */
 }
 
 /* Chat Window --------------------------------------------------------------------------------------------------------------------------*/
@@ -75,6 +101,22 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+/* Active Chatroom Highlight */
+.chatroom-item.active {
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+}
+
+/* Chat Messages */
+#chat-messages-container {
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
 }
 
 .chat-header {
@@ -101,32 +143,50 @@ html, body {
 }
 
 .message {
-    padding: 10px;
-    border-radius: 10px;
+    padding: 8px 12px; /* Reduce padding for a better fit */
+    border-radius: 15px;
     max-width: 60%;
+    word-wrap: break-word;
+    display: block;  /* Ensures bubbles stack properly */
+    margin-bottom: 8px; /* Add spacing between messages */
+    white-space: normal; /* Wrap long text properly */
 }
 
-.left {
-    background: #D9D9D9;
-    align-self: flex-start;
-}
-
+/* User Messages (Right Side) */
 .right {
-    background: #FFD2D8;
+    background: #FFD2D8;  /* Light pink */
     align-self: flex-end;
+    text-align: left;
+    max-width: fit-content; /* Shrinks to text size */
+    margin-left: auto; /* Push to right */
 }
 
+/* Bot Messages (Left Side) */
+.left {
+    background: #D9D9D9; /* Light gray */
+    align-self: flex-start;
+    text-align: left;
+    max-width: fit-content; /* Shrinks to text size */
+    margin-right: auto; /* Push to left */
+}
+
+/* Chat Input Container */
 .chat-input {
+    display: flex;
+    align-items: center;
     background: #aab9a6;
     padding: 10px;
+    gap: 10px; /* Adds space between button and input */
 }
 
+/* Input Field */
 .chat-input input {
-    width: 100%;
-    padding: 8px;
+    flex: 1; /* Makes the input take remaining space */
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     outline: none;
+    font-size: 16px;
 }
 
 /* ALL Page Styles --------------------------------------------------------------------------------------------------------------------------*/
@@ -319,6 +379,64 @@ html, body {
 
 /* Click Animation */
 .anew-message-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Chatroom Items (Make them buttons) */
+.chatroom-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px;
+    width: 100%;
+    background: none;
+    border: 2px solid transparent; /* Default no border */
+    color: white;
+    font-size: 18px;
+    font-family: kosugiMaru;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    border-radius: 10px;
+}
+
+/* Hover Effect */
+.chatroom-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+}
+
+/* Click (Active) Effect */
+.chatroom-item:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Selected State */
+.chatroom-item.active {
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+}
+
+/* Send Button (Aligned Right) */
+.send-btn {
+    background: #6FA56F;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+/* Hover Effect */
+.send-btn:hover {
+    background: #5C8A5C;
+}
+
+/* Click Animation */
+.send-btn:active {
     transform: scale(0.9);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }

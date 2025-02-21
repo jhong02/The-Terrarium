@@ -15,32 +15,65 @@
             <nav class="chatrooms">
                 <p>Chatrooms</p>
                 <ul>
-                    <li>User_1</li>
-                    <li>User_2</li>
-                    <li>User_3</li>
-                    <li>User_4</li>
-                    <li>User_5</li>
-                    <li>User_6</li>
-                    <li>User_7</li>
-                    <li>User_8</li>
+                    <li class="chatroom-item" onclick="openChat('User_1')">
+                        <img src="images/user1.png" alt="User 1 Icon" class="user-icon">
+                        User_1
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_2')">
+                        <img src="images/user1.png" alt="User 2 Icon" class="user-icon">
+                        User_2
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_3')">
+                        <img src="images/user1.png" alt="User 3 Icon" class="user-icon">
+                        User_3
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_4')">
+                        <img src="images/user1.png" alt="User 4 Icon" class="user-icon">
+                        User_4
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_5')">
+                        <img src="images/user1.png" alt="User 5 Icon" class="user-icon">
+                        User_5
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_6')">
+                        <img src="images/user1.png" alt="User 6 Icon" class="user-icon">
+                        User_6
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_7')">
+                        <img src="images/user1.png" alt="User 7 Icon" class="user-icon">
+                        User_7
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_8')">
+                        <img src="images/user1.png" alt="User 8 Icon" class="user-icon">
+                        User_8
+                    </li>
                 </ul>
             </nav>
         </aside>
 
         <main class="chat-window">
             <div class="chat-header">
-                <p>Chatroom</p>
+                <p id="chatroom-title">Chatroom</p>
                 <button class="about-btn" onclick="handleAbout()">about</button>
             </div>
-            <div class="chat-messages">
-                <div class="message left">resizable text bubble</div>
-                <div class="message left">resizable text bubble</div>
-                <div class="message right">resizable text bubble</div>
+        
+            <div id="chat-messages-container">
+                <!-- Welcome Screen (Visible by Default) -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <h2>Welcome <span id="username">[new_user]</span>!</h2>
+                    <p>Please choose a chatroom!</p>
+                </div>
+        
+                <!-- Chat Messages (Hidden Initially) -->
+                <div class="chat-messages" id="chat-messages" style="display: none;"></div>
             </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Type a message...">
+        
+            <div class="chat-input" id="chatInput" style="display: none;">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button class="send-btn" onclick="sendMessage()">Send</button>
             </div>
         </main>
+        
     </div>
 
     <script src="script.js"></script>
