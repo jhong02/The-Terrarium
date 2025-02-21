@@ -1,3 +1,4 @@
+/* ========== Global Styles ========== */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +20,7 @@ html, body {
     align-items: center;
 }
 
-/* Full-Screen Chat Container */
+/* ========== Chat Layout ========== */
 .chat-container {
     display: flex;
     width: 100%;
@@ -27,7 +28,7 @@ html, body {
     background: #d2e4c4;
 }
 
-/* Welcome Screen */
+/* ========== Welcome Screen ========== */
 .welcome-screen {
     display: flex;
     flex-direction: column;
@@ -41,7 +42,23 @@ html, body {
     width: 100%;
 }
 
-/* Sidebar--------------------------------------------------------------------------------------------------------- */
+/* ========== Username Input ========== */
+.name-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #6FA56F;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.name-input:focus {
+    border-color: #5C8A5C;
+}
+
+/* ========== Sidebar ========== */
 .sidebar {
     flex: 0.25;
     background: #6FA56F;
@@ -65,7 +82,7 @@ html, body {
 .chatrooms p {
     color: #fff;
     font-weight: bold;
-    font-size: 22px;  /* Increase the font size */
+    font-size: 22px;
 }
 
 .chatrooms ul {
@@ -77,7 +94,7 @@ html, body {
 .chatrooms li {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adds space between the icon and username */
+    gap: 10px;
     padding: 10px;
     margin-top: 8px;
     border-radius: 5px;
@@ -86,15 +103,16 @@ html, body {
     font-size: 18px;
 }
 
+/* ========== User Icon ========== */
 .user-icon {
-    width: 40px; /* Adjust size as needed */
+    width: 40px;
     height: 40px;
-    border-radius: 50%; /* Makes the icons circular */
-    object-fit: cover; /* Ensures the image scales properly */
-    border: 2px solid white; /* Adds a slight border for visibility */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
 }
 
-/* Chat Window --------------------------------------------------------------------------------------------------------------------------*/
+/* ========== Chat Window ========== */
 .chat-window {
     flex: 0.75;
     background: #A0D1A0;
@@ -103,13 +121,23 @@ html, body {
     justify-content: space-between;
 }
 
-/* Active Chatroom Highlight */
+/* ========== Active Chatroom Highlight ========== */
 .chatroom-item.active {
     background: rgba(255, 255, 255, 0.4);
     border: 2px solid white;
 }
 
-/* Chat Messages */
+/* ========== Chat Header ========== */
+.chat-header {
+    font-size: 24;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    background: #6FA56F;
+}
+
+/* ========== Chat Messages ========== */
 #chat-messages-container {
     flex-grow: 1;
     padding: 15px;
@@ -117,20 +145,6 @@ html, body {
     flex-direction: column;
     gap: 10px;
     overflow-y: auto;
-}
-
-.chat-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background: #8ca38e;
-}
-
-.landing-help {
-    display: block;
-    margin: 15px auto 0; /* Moves it down below "Enter!" */
-    align-items: center;
-    text-align: center;
 }
 
 .chat-messages {
@@ -142,46 +156,47 @@ html, body {
     overflow-y: auto;
 }
 
+/* ========== Chat Bubbles ========== */
 .message {
-    padding: 8px 12px; /* Reduce padding for a better fit */
+    padding: 8px 12px;
     border-radius: 15px;
     max-width: 60%;
     word-wrap: break-word;
-    display: block;  /* Ensures bubbles stack properly */
-    margin-bottom: 8px; /* Add spacing between messages */
-    white-space: normal; /* Wrap long text properly */
+    display: block;
+    margin-bottom: 8px;
+    white-space: normal;
 }
 
-/* User Messages (Right Side) */
+/* ========== User Messages (Right Side) ========== */
 .right {
-    background: #FFD2D8;  /* Light pink */
+    background: #FFD2D8;
     align-self: flex-end;
     text-align: left;
-    max-width: fit-content; /* Shrinks to text size */
-    margin-left: auto; /* Push to right */
+    max-width: fit-content;
+    margin-left: auto;
 }
 
-/* Bot Messages (Left Side) */
+/* ========== Bot Messages (Left Side) ========== */
 .left {
-    background: #D9D9D9; /* Light gray */
+    background: #D9D9D9;
     align-self: flex-start;
     text-align: left;
-    max-width: fit-content; /* Shrinks to text size */
-    margin-right: auto; /* Push to left */
+    max-width: fit-content;
+    margin-right: auto;
 }
 
-/* Chat Input Container */
+/* ========== Chat Input ========== */
 .chat-input {
     display: flex;
     align-items: center;
     background: #aab9a6;
     padding: 10px;
-    gap: 10px; /* Adds space between button and input */
+    gap: 10px;
 }
 
-/* Input Field */
+/* ========== Input Field ========== */
 .chat-input input {
-    flex: 1; /* Makes the input take remaining space */
+    flex: 1;
     padding: 12px;
     border: none;
     border-radius: 20px;
@@ -189,17 +204,16 @@ html, body {
     font-size: 16px;
 }
 
-/* ALL Page Styles --------------------------------------------------------------------------------------------------------------------------*/
+/* ========== Landing Page ========== */
 .all-bg {
-    background-color: #A0D1A0; /* Set background color */
-    height: 100vh; /* Ensure it fills the full screen */
+    background-color: #A0D1A0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Green Box (Homepage)--------------------------------------------------------------------------------------------------------------------------*/
 .landing-container {
     background: #6FA56F;
     padding: 40px;
@@ -209,7 +223,6 @@ html, body {
     width: 320px;
 }
 
-/* Text & Image inside Green Box */
 .landing-container h1,
 .landing-container h2 {
     font-family: kosugiMaru;
@@ -222,7 +235,7 @@ html, body {
     margin: 15px 0;
 }
 
-/* Footer */
+/* ========== Footer ========== */
 .landing-footer {
     text-align: center;
     margin-top: 20px;
@@ -235,7 +248,7 @@ html, body {
     margin-bottom: 15px;
 }
 
-/* LOADING SCREEN ------------------------------------------------------------------------------------------- */
+/* ========== Loading Screen ========== */
 .loading-screen {
     position: fixed;
     top: 0;
@@ -250,10 +263,10 @@ html, body {
     font-family: kosugiMaru;
     font-size: 18px;
     color: #4B604B;
-    display: none; /* Initially hidden */
+    display: none;
 }
 
-/* LOADING SPINNER */
+/* ========== Loading Spinner ========== */
 .loading-spinner {
     width: 50px;
     height: 50px;
@@ -264,7 +277,6 @@ html, body {
     margin-bottom: 15px;
 }
 
-/* Loading Animation */
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -273,8 +285,93 @@ html, body {
         transform: rotate(360deg);
     }
 }
-  /* text when hover over img -----------------------------------------------------------------------------*/
-.imgtxt {
+
+/* ========== Buttons ========== */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #6FA56F;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-btn:hover {
+    background: #5C8A5C;
+}
+
+.enter-btn {
+    background: #6FA56F;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.new-message-btn {
+    background: #d2e4c4;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.new-message-btn:hover {
+    background: #fff;
+}
+
+.landing-help {
+    display: block;
+    margin: 15px auto 0; /* Moves it down below "Enter!" */
+    align-items: center;
+    text-align: center;
+}
+
+.about-btn {
+    background: #718d72;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Button Hover */
+.about-btn:hover {
+    background: #5C8A5C;
+}
+
+/* ========== Chatroom Item ========== */
+.chatroom-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 18px;
+    font-family: kosugiMaru;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.chatroom-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+}
+
+/* ========== About Page ========== */
+  .imgtxt {
     width: fit-content;
     height: fit-content;
     display: inline-block;
@@ -300,143 +397,3 @@ html, body {
   .imgtxt:hover img, .imgtxt:focus img {
     /* add hover effects like transform or filter to your images here! */
   }
-
-  /* ALL buttons -----------------------------------------------------------------------------*/
-  .back-btn {
-    position: absolute;
-    top: 20px; /* Distance from the top */
-    left: 20px; /* Distance from the left */
-    background: #6FA56F;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-/* Hover and Click Effects */
-.back-btn:hover {
-    background: #5C8A5C;
-}
-
-.back-btn:active {
-    transform: scale(0.9);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.about-btn {
-    background: #718d72;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Button Hover */
-.about-btn:hover {
-    background: #5C8A5C;
-}
-
-/* Enter Button */
-.enter-btn {
-    background: #6FA56F;
-    border: none;
-    padding: 12px 20px;
-    font-size: 18px;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-/* Button Hover */
-.enter-btn:hover {
-    background: #5C8A5C;
-}
-
-/* Click Animation */
-.enter-btn:active {
-    transform: scale(0.9);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.new-message-btn {
-    background: #d2e4c4;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: left;
-}
-
-.new-message-btn:hover {
-    background: #fff;
-}
-
-/* Click Animation */
-.anew-message-btn:active {
-    transform: scale(0.9);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Chatroom Items (Make them buttons) */
-.chatroom-item {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between icon and text */
-    padding: 10px;
-    width: 100%;
-    background: none;
-    border: 2px solid transparent; /* Default no border */
-    color: white;
-    font-size: 18px;
-    font-family: kosugiMaru;
-    cursor: pointer;
-    transition: background 0.2s, border 0.2s;
-    border-radius: 10px;
-}
-
-/* Hover Effect */
-.chatroom-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
-}
-
-/* Click (Active) Effect */
-.chatroom-item:active {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-/* Selected State */
-.chatroom-item.active {
-    background: rgba(255, 255, 255, 0.4);
-    border: 2px solid white;
-}
-
-/* Send Button (Aligned Right) */
-.send-btn {
-    background: #6FA56F;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    flex-shrink: 0; /* Prevents button from shrinking */
-}
-
-/* Hover Effect */
-.send-btn:hover {
-    background: #5C8A5C;
-}
-
-/* Click Animation */
-.send-btn:active {
-    transform: scale(0.9);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-}

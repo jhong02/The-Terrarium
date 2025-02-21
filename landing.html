@@ -23,7 +23,10 @@
 
     <div class="landing-footer" id="footer">
         <p>A fun little critter quiz!</p>
-        <button class="enter-btn" onclick="showLoadingScreen('index.html')">Enter!</button>
+
+        <!-- Name Input -->
+        <input type="text" id="usernameInput" placeholder="Enter your name..." class="name-input">
+        <button class="enter-btn" onclick="storeUsername()('index.html')">Enter!</button>
         <button class="about-btn landing-help"onclick="showLoadingScreen('about.html')">?</button>
     </div>
 
