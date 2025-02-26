@@ -43,7 +43,7 @@ function storeUsername() {
     }
 
     localStorage.setItem("username", username);
-    window.location.href = "index.html";
+    window.location.href = "landing.html";
 }
 
 function updateUsernameOnPage() {

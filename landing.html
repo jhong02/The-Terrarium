@@ -3,31 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to The Terrarium</title>
+    <title>The Terrarium</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="all-bg">
+<body>
 
-    <!-- LOADING SCREEN (Hidden) -->
-    <div class="loading-screen" id="loading">
-        <div class="loading-spinner"></div>
-        <p>Loading...</p>
-    </div>
+    <div class="chat-container">
+        <aside class="sidebar">
+            <a href="index.html" class="logo">🪲 [ The Terrarium ] </a>
+            <button class="new-message-btn" onclick="handleNewMessage()">📩 New Message (1)</button>
+            <nav class="chatrooms">
+                <p>Chatrooms</p>
+                <ul>
+                    <li class="chatroom-item" onclick="openChat('User_1')">
+                        <img src="images/user1.png" alt="User 1 Icon" class="user-icon">
+                        User_1
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_2')">
+                        <img src="images/user1.png" alt="User 2 Icon" class="user-icon">
+                        User_2
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_3')">
+                        <img src="images/user1.png" alt="User 3 Icon" class="user-icon">
+                        User_3
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_4')">
+                        <img src="images/user1.png" alt="User 4 Icon" class="user-icon">
+                        User_4
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_5')">
+                        <img src="images/user1.png" alt="User 5 Icon" class="user-icon">
+                        User_5
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_6')">
+                        <img src="images/user1.png" alt="User 6 Icon" class="user-icon">
+                        User_6
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_7')">
+                        <img src="images/user1.png" alt="User 7 Icon" class="user-icon">
+                        User_7
+                    </li>
+                    <li class="chatroom-item" onclick="openChat('User_8')">
+                        <img src="images/user1.png" alt="User 8 Icon" class="user-icon">
+                        User_8
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-    <!-- MAIN CONTENT -->
-    <div class="landing-container" id="main-content">
-        <h1>Welcome to...</h1>
-        <img src="images/logo.png" alt="Terrarium Image" class="landing-image">
-        <h2>The Terrarium</h2>
-    </div>
-
-    <div class="landing-footer" id="footer">
-        <p>A fun little critter quiz!</p>
-
-        <!-- Name Input -->
-        <input type="text" id="usernameInput" maxlength="25" placeholder="Enter your name..." class="name-input">
-        <button class="enter-btn" onclick="storeUsername()('index.html')">Enter!</button>
-        <button class="about-btn landing-help"onclick="showLoadingScreen('about.html')">?</button>
+        <main class="chat-window">
+            <div class="chat-header">
+                <p id="chatroom-title">Chatroom</p>
+                <button class="about-btn" onclick="handleAbout()">about</button>
+            </div>
+        
+            <div id="chat-messages-container">
+                 <!-- Welcome Screen -->
+                 <div class="welcome-screen" id="welcomeScreen">
+                    <h2>Welcome, <span id="displayUsername">[new_user]</span>!</h2>
+                    <p>Please choose a chatroom!</p>
+                </div>
+        
+                <!-- Chat Messages (Hidden Initially) -->
+                <div class="chat-messages" id="chat-messages" style="display: none;"></div>
+            </div>
+        
+            <div class="chat-input" id="chatInput" style="display: none;">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button class="send-btn" onclick="sendMessage()">Send</button>
+            </div>
+        </main>
+        
     </div>
 
     <script src="script.js"></script>
